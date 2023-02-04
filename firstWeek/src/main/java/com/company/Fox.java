@@ -55,8 +55,8 @@ public String name;
         for (Fox each : list) {
             if(each.getCoatColor().equalsIgnoreCase("Black")
                     &&each.hasTorch==true&&each.isWearCoat()==true&&each.getBagCount()==3){
-                System.out.println("Suspect fox is "+each.getName());
-                //Suspect fox is fox3
+                System.out.println("Thief fox is "+each.getName());
+                //Thief fox is fox3
 
             }
 
