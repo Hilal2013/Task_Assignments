@@ -1,7 +1,28 @@
 package com.company;
 
-public class ThiefFox {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+public class Fox {
+
+    public boolean isWearCoat;
+    public boolean hasTorch;
+    public String coatColor;
+    public int bagCount;
+public String name;
+
     public static void main(String[] args) {
+        /*
         boolean fox1WearsCoat = true;
         boolean fox2WearsCoat = true;
         boolean fox3WearsCoat = true;
@@ -23,8 +44,23 @@ public class ThiefFox {
         int fox4BagCount = 3;
 
 
+         */
 
+        Fox fox1 = new Fox(true, true, "BLACK", 0,"fox1");
+        Fox fox2 = new Fox(true, true, "BLACK", 2,"fox2");
+        Fox fox3 = new Fox(true, true, "BLACK", 3,"fox3");
+        Fox fox4 = new Fox(false, true, "GRAY", 4,"fox4");
+        List<Fox> list= Arrays.asList(fox1,fox2,fox3,fox4);
 
+        for (Fox each : list) {
+            if(each.getCoatColor().equalsIgnoreCase("Black")
+                    &&each.hasTorch==true&&each.isWearCoat()==true&&each.getBagCount()==3){
+                System.out.println("Suspect fox is "+each.getName());
+                //Suspect fox is fox3
+
+            }
+
+        }
 
     }
 
