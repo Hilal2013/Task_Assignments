@@ -51,15 +51,22 @@ public String name;
         Fox fox3 = new Fox(true, true, "BLACK", 3,"fox3");
         Fox fox4 = new Fox(false, true, "GRAY", 4,"fox4");
         List<Fox> list= Arrays.asList(fox1,fox2,fox3,fox4);
-
+String result="";
         for (Fox each : list) {
             if(each.getCoatColor().equalsIgnoreCase("Black")
                     &&each.hasTorch==true&&each.isWearCoat()==true&&each.getBagCount()==3){
-                System.out.println("Thief fox is "+each.getName());
-                //Thief fox is fox3
+                result="Thief fox is "+each.getName();
 
+
+            }else{
+             result=   each.getName()+" is cleared of caharges";
             }
+            System.out.println(result);
 
+            //fox1 is cleared of caharges
+            //fox2 is cleared of caharges
+            //Thief fox is fox3
+            //fox4 is cleared of caharges
         }
 
     }

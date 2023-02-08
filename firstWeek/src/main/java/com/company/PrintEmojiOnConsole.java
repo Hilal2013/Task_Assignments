@@ -3,6 +3,8 @@ package com.company;
 import com.vdurmont.emoji.Emoji;
 import com.vdurmont.emoji.EmojiParser;
 
+import java.util.Scanner;
+
 public class PrintEmojiOnConsole {
     public static void main(String[] args) {
 
@@ -16,5 +18,13 @@ public class PrintEmojiOnConsole {
         String y = Character.toString( 128_512 );
         System.out.println( y ) ;
         System.out.println(EmojiParser.parseToUnicode("Good night :moon:"));
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter emoji");
+        String emoji = scan.next();
+
+        if(emoji.equals("smile")) {
+            System.out.println("\uD83D\uDE00");
+        }
     }
 }
