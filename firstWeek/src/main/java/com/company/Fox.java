@@ -68,6 +68,12 @@ String result="";
             //Thief fox is fox3
             //fox4 is cleared of caharges
         }
+list.stream()
+        .filter(each->each.getCoatColor().equalsIgnoreCase("Black"))
+        .filter(each->each.hasTorch)
+        .filter(each-> each.isWearCoat)
+        .filter(each->each.getBagCount()==3)
+        .forEach(each-> System.out.println("Thief fox is "+each.getName()));
 
     }
 
