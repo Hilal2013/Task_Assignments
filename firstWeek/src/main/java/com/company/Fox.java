@@ -57,16 +57,15 @@ String result="";
                     &&each.hasTorch==true&&each.isWearCoat()==true&&each.getBagCount()==3){
                 result="Thief fox is "+each.getName();
 
-
             }else{
-             result=   each.getName()+" is cleared of caharges";
+             result=   each.getName()+" is cleared of charges";
             }
             System.out.println(result);
 
-            //fox1 is cleared of caharges
-            //fox2 is cleared of caharges
+            //fox1 is cleared of charges
+            //fox2 is cleared of charges
             //Thief fox is fox3
-            //fox4 is cleared of caharges
+            //fox4 is cleared of charges
         }
 list.stream()
         .filter(each->each.getCoatColor().equalsIgnoreCase("Black"))
@@ -74,6 +73,8 @@ list.stream()
         .filter(each-> each.isWearCoat)
         .filter(each->each.getBagCount()==3)
         .forEach(each-> System.out.println("Thief fox is "+each.getName()));
+        //Thief fox is fox3
+
 
     }
 

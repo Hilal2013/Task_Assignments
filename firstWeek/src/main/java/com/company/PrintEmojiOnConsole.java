@@ -24,7 +24,7 @@ public class PrintEmojiOnConsole {
         String emoji = scan.next();
 
         if(emoji.equals("smile")) {
-            System.out.println("\uD83D\uDE00");
+            System.out.println("\uD83D\uDE01");
         }
     }
 }
